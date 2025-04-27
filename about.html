@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about MYND's journey, mission, and values. Discover how our integrated back-office solutions help businesses transform their operations.">
+    <meta name="keywords" content="about MYND, MYND solutions, back-office solutions, BPM, business process management, company values, mission">
+    <meta name="author" content="MYND Integrated Solutions">
+    <meta property="og:title" content="About MYND - Our Story, Mission and Values">
+    <meta property="og:description" content="Learn about MYND's mission to simplify the complex and connect the disconnected – turning your operations from a burden to a strategic asset.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.myndsolution.com/about">
+    <meta property="og:image" content="https://www.myndsolution.com/assets/images/mynd-og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <title>About MYND - Our Story, Mission and Values</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/about-styles.css">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#253c74',
+                        secondary: '#0c4da2',
+                        accent: '#ee3897',
+                        accent2: '#ea5e24',
+                        lightPrimary: '#3a5494',
+                        darkPrimary: '#1a2c54'
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif']
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-position': '0% 50%'
+                            },
+                            '50%': {
+                                'background-position': '100% 50%'
+                            }
+                        },
+                        'float': {
+                            '0%, 100%': {
+                                transform: 'translateY(0px)'
+                            },
+                            '50%': {
+                                transform: 'translateY(-20px)'
+                            }
+                        }
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-montserrat text-gray-800 overflow-x-hidden">
+    <!-- Animated Background Shapes -->
+    <div class="fixed inset-0 -z-10 overflow-hidden opacity-10">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+    
+    <!-- Header/Navbar (Reusable Component) -->
+    <header id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-500">
+        <div class="navbar-container mx-auto">
+            <nav class="flex justify-between items-center py-4 px-6 lg:px-8">
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/images/logo-white.svg" alt="MYND Logo" class="h-10">
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html#solutions" class="nav-link text-white hover:text-accent transition-colors duration-300">Solutions</a></li>
+                        <li><a href="index.html#brands" class="nav-link text-white hover:text-accent transition-colors duration-300">Our Brands</a></li>
+                        <li><a href="index.html#industries" class="nav-link text-white hover:text-accent transition-colors duration-300">Industries</a></li>
+                        <li><a href="index.html#difference" class="nav-link text-white hover:text-accent transition-colors duration-300">The MYND Difference</a></li>
+                        <li><a href="about.html" class="nav-link text-white hover:text-accent transition-colors duration-300">About Us</a></li>
+                    </ul>
+                    <a href="index.html#contact" class="nav-cta group">
+                        <span>Contact Us</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden backdrop-blur-lg bg-primary/90 absolute w-full border-b border-white/10">
+            <div class="container mx-auto py-6 px-6">
+                <ul class="space-y-6 mb-8">
+                    <li><a href="index.html#solutions" class="block text-lg text-white hover:text-accent py-1 transition-colors duration-300">Solutions</a></li>
+                    <li><a href="index.html#brands" class="block text-lg text-white hover:text-accent py-1 transition-colors duration-300">Our Brands</a></li>
+                    <li><a href="index.html#industries" class="block text-lg text-white hover:text-accent py-1 transition-colors duration-300">Industries</a></li>
+                    <li><a href="index.html#difference" class="block text-lg text-white hover:text-accent py-1 transition-colors duration-300">The MYND Difference</a></li>
+                    <li><a href="about.html" class="block text-lg text-white hover:text-accent py-1 transition-colors duration-300">About Us</a></li>
+                </ul>
+                <a href="index.html#contact" class="mobile-nav-cta flex items-center">
+                    <span>Contact Us</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about-hero" class="min-h-[80vh] flex items-center relative overflow-hidden bg-fixed" style="background-image: url('assets/images/about-hero.jpg'); background-size: cover; background-position: center;">
+        <!-- Semi-transparent Overlay Gradient -->
+        <div class="hero-gradient absolute inset-0 bg-gradient-to-br from-primary/85 via-secondary/80 to-primary/85 bg-[length:200%_200%] animate-gradient-x"></div>
+        
+        <div class="container relative z-10 mx-auto px-6 lg:px-8 pt-24 pb-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                        Eyes on the Sky, Feet on the Ground.
+                    </h1>
+                    
+                    <p class="text-xl md:text-2xl text-white opacity-90 mb-10">
+                        At MYND Integrated Solutions, we're reimagining how business works, by creating integrated ecosystems for Finance & Accounts, HR, Staffing, and Tech.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                        <div class="stat-card">
+                            <span class="text-3xl font-bold text-white">500<span class="text-accent">+</span></span>
+                            <p class="text-white/80">clients trust us with their back-office operations</p>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <span class="text-3xl font-bold text-white">30</span>
+                            <p class="text-white/80">industries depend on MYND for BPM solutions</p>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <span class="text-3xl font-bold text-white">$2.5<span class="text-accent">B</span></span>
+                            <p class="text-white/80">in transactions processed each year</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <a href="#drives-us" class="hero-btn primary scroll-btn group">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-down ml-2 group-hover:translate-y-1 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hero curve separator -->
+        <div class="absolute bottom-0 left-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 180">
+                <path fill="#ffffff" fill-opacity="1" d="M0,128L60,117.3C120,107,240,85,360,90.7C480,96,600,128,720,138.7C840,149,960,139,1080,122.7C1200,107,1320,85,1380,74.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- What Drives Us Section -->
+    <section id="drives-us" class="py-24 relative overflow-hidden bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                    What Drives Us
+                </span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-6">Our Core Principles</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We're passionate about simplifying the complex and connecting the disconnected – taking your operations from a burden to a strategic asset.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+                <!-- Vision -->
+                <div class="core-card">
+                    <div class="core-icon-wrap">
+                        <i class="fas fa-eye text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Vision</h3>
+                    <p class="text-gray-600">
+                        To be the Partner of Choice delivering value to businesses with innovative solutions, cutting-edge technology and human intelligence.
+                    </p>
+                </div>
+                
+                <!-- Mission -->
+                <div class="core-card">
+                    <div class="core-icon-wrap">
+                        <i class="fas fa-bullseye text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Mission</h3>
+                    <p class="text-gray-600">
+                        To provide cutting edge solutions by creating, simplifying and transforming business processes.
+                    </p>
+                </div>
+                
+                <!-- Purpose -->
+                <div class="core-card">
+                    <div class="core-icon-wrap">
+                        <i class="fas fa-compass text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Purpose</h3>
+                    <p class="text-gray-600">
+                        We are deeply committed to helping people and processes achieve excellence, and creating value for all stakeholders.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="what-we-do" class="py-24 bg-gradient-to-br from-primary/5 to-secondary/5 relative overflow-hidden">
+        <div class="section-pattern"></div>
+        
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                    What We Do
+                </span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-6">Our Integrated Solutions</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We give you your <strong>time back</strong> —the one resource no business can scale.<br>
+                    Whether Finance and Accounts or HR, there's a suite for your every need.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up">
+                <!-- MYND Enterprise Solutions -->
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">MYND Enterprise Solutions</h3>
+                        <p class="text-gray-600 mb-6">
+                            Your one-stop BPM services brand, built from deep F&A and HR knowledge.
+                        </p>
+                        <a href="#" class="service-btn group">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- MYNDX -->
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">MYNDX</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our SaaS powerhouse – offering platforms like MYNDAPX and MYNDHRX – makes automation a breeze.
+                        </p>
+                        <a href="#" class="service-btn group">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- MYND GIG -->
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-users-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">MYND GIG</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our staffing and recruiting engine to help you find the right people, even at scale.
+                        </p>
+                        <a href="#" class="service-btn group">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Build Section -->
+    <section id="how-we-build" class="py-24 relative overflow-hidden bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                    How We Build
+                </span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-6">Our Approach</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We move fast – with purpose, transparency and complete alignment – to ensure you achieve all your goals, every time.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+                <!-- Flexibility -->
+                <div class="approach-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="approach-icon">
+                        <i class="fas fa-arrows-to-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Flexibility</h3>
+                    <p class="text-gray-600">
+                        Highly configurable workflows adapt to how you operate – from approval hierarchies to regional compliance needs – ensuring minimal disruption and maximum efficiency.
+                    </p>
+                </div>
+                
+                <!-- Trust -->
+                <div class="approach-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="approach-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Trust</h3>
+                    <p class="text-gray-600">
+                        An unbeatable privacy and security track record, and long-standing partnerships reflect our deep commitment to our clients and partners.
+                    </p>
+                </div>
+                
+                <!-- Cross-functionality -->
+                <div class="approach-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="approach-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Cross-functionality</h3>
+                    <p class="text-gray-600">
+                        Finance experts, HR specialists, and tech innovators work side-by-side in dedicated pods— to deliver end-to-end solutions, not piecemeal fixes.
+                    </p>
+                </div>
+                
+                <!-- Impact -->
+                <div class="approach-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="approach-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Impact</h3>
+                    <p class="text-gray-600">
+                        Our work does all the talking, with over 2 decades of happy clients, surpassed KPIs and transformed operations.
+                    </p>
+                </div>
+                
+                <!-- Compliance -->
+                <div class="approach-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="approach-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Compliance</h3>
+                    <p class="text-gray-600">
+                        Whether GST or GDPR, our solutions bake in compliance for every region of operation, ensuring audits are stress-free and growth uninterrupted.
+                    </p>
+                </div>
+                
+                <!-- Partnership -->
+                <div class="approach-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="approach-icon">
+                        <i class="fas fa-people-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Partnership</h3>
+                    <p class="text-gray-600">
+                        We align our success with yours, no rigid contracts, or jargon to slow us down. Just relentless focus on cutting complexity so you can focus on the important stuff.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section (Placeholder) -->
+    <section id="client-logos" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-2xl font-bold text-primary">Trusted by Industry Leaders</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center" data-aos="fade-up" data-aos-delay="100">
+                <!-- Placeholder logos -->
+                <div class="flex items-center justify-center h-20 w-full">
+                    <div class="bg-gray-300 h-12 w-32 rounded-md animate-pulse"></div>
+                </div>
+                <div class="flex items-center justify-center h-20 w-full">
+                    <div class="bg-gray-300 h-12 w-32 rounded-md animate-pulse"></div>
+                </div>
+                <div class="flex items-center justify-center h-20 w-full">
+                    <div class="bg-gray-300 h-12 w-32 rounded-md animate-pulse"></div>
+                </div>
+                <div class="flex items-center justify-center h-20 w-full">
+                    <div class="bg-gray-300 h-12 w-32 rounded-md animate-pulse"></div>
+                </div>
+                <div class="flex items-center justify-center h-20 w-full">
+                    <div class="bg-gray-300 h-12 w-32 rounded-md animate-pulse"></div>
+                </div>
+                <div class="flex items-center justify-center h-20 w-full">
+                    <div class="bg-gray-300 h-12 w-32 rounded-md animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Believe In Section -->
+    <section id="our-values" class="py-24 bg-gradient-to-br from-primary/5 to-secondary/5 relative overflow-hidden">
+        <div class="section-pattern"></div>
+        
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                    What We Believe In
+                </span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-6">Our Values</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Our culture is built on learning, collaboration, acceptance, and a deep commitment to our values.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+                <!-- Integrity -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Integrity</h3>
+                    <p class="text-gray-600">
+                        We keep processes transparent and adhere to the highest ethical standards in every situation.
+                    </p>
+                </div>
+                
+                <!-- Customer Centricity -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Customer Centricity</h3>
+                    <p class="text-gray-600">
+                        Your success shapes our priorities. Every solution is tailored around your unique goals.
+                    </p>
+                </div>
+                
+                <!-- Excellence -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Excellence</h3>
+                    <p class="text-gray-600">
+                        We never settle. From tech implementations to daily transactions, we always strive for perfection.
+                    </p>
+                </div>
+                
+                <!-- Diversity -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="value-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Diversity</h3>
+                    <p class="text-gray-600">
+                        We believe that varied perspectives spark better ideas—so differences are celebrated.
+                    </p>
+                </div>
+                
+                <!-- Innovation -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Innovation</h3>
+                    <p class="text-gray-600">
+                        AI, RPA, data analytics—these aren't buzzwords; they're the tools we use daily to keep you on the cutting edge.
+                    </p>
+                </div>
+                
+                <!-- Commitment -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Commitment</h3>
+                    <p class="text-gray-600">
+                        We see every partnership as long-term. When you grow, we grow.
+                    </p>
+                </div>
+                
+                <!-- Empowerment -->
+                <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="value-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Empowerment</h3>
+                    <p class="text-gray-600">
+                        Whether it's your team or our own employees, we equip people to drive meaningful change.
+                    </p>
+                </div>
+                
+                <!-- Inclusion Box -->
+                <div class="inclusion-card col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-1" data-aos="fade-up" data-aos-delay="450">
+                    <h3 class="text-xl font-bold text-white mb-4">Diversity & Inclusion</h3>
+                    <p class="text-white/90">
+                        Diverse teams build faster, stronger and better solutions. Thus, we're committed to offering a supportive and inclusive working environment that allows people from different backgrounds to come together with a shared purpose and vision.
+                    </p>
+                    <a href="#" class="mt-6 inline-flex items-center font-medium text-white hover:text-accent2 transition-colors duration-300 group">
+                        <span>Join the team</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey Section -->
+    <section id="journey" class="py-24 relative overflow-hidden bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                    Our Journey
+                </span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-6">Two Decades of Excellence</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    From our humble beginnings to becoming a global leader in integrated back-office solutions, our journey has been defined by innovation and excellence.
+                </p>
+            </div>
+            
+            <div class="journey-timeline" data-aos="fade-up">
+                <!-- 2002-2010 -->
+                <div class="journey-card">
+                    <div class="journey-year">2002–2010</div>
+                    <div class="journey-content">
+                        <h3 class="text-2xl font-bold text-primary mb-4">The Bedrock of Excellence</h3>
+                        <ul class="journey-list">
+                            <li>Launched in Gurgaon, with a vision to tackle finance and HR bottlenecks through technology.</li>
+                            <li>For telecom giants struggling with manual payroll, developed India's early SaaS-based HRMS.</li>
+                            <li>In the era before e-commerce, automated vendor payments for 300+ stores.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 2011-2020 -->
+                <div class="journey-card">
+                    <div class="journey-year">2011–2020</div>
+                    <div class="journey-content">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Smart Tech; Global Vision</h3>
+                        <ul class="journey-list">
+                            <li>Began building comprehensive AI-enabled solutions, such as our flagship Procure-to-Pay tool, PEARL.</li>
+                            <li>Expanded globally – with hubs in Dubai, Accra, and Singapore – and mastered MENA tax compliance, pan-Africa staffing, and APAC fintech.</li>
+                            <li>Rolled out RPA and analytics-based solutions, earning accolades from ET Now, NASSCOM, and others.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 2021-Now -->
+                <div class="journey-card">
+                    <div class="journey-year">2021–Now</div>
+                    <div class="journey-content">
+                        <h3 class="text-2xl font-bold text-primary mb-4">The Integration Era</h3>
+                        <ul class="journey-list">
+                            <li>Creating unified payroll and vendor systems to build end-to-end solutions; helped burger chains open 300 stores in 6 months.</li>
+                            <li>Automated ₹50Cr+ in FAME subsidies for leading EV startups.</li>
+                            <li>Leaning into ESG reporting, predictive analytics, and carbon-credit compliance for key sectors like renewables and manufacturing.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="py-24 bg-gradient-to-br from-primary/5 to-secondary/5 relative overflow-hidden">
+        <div class="section-pattern"></div>
+        
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                    Our Team
+                </span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-6">The Minds Behind MYND</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Our leadership team combines decades of industry experience, technological expertise, and a shared vision for transforming back-office operations.
+                </p>
+            </div>
+            
+            <!-- Leadership Team -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-primary mb-8 text-center" data-aos="fade-up">Leadership Team</h3>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Team Member 1 -->
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <div class="team-img-placeholder"></div>
+                        </div>
+                        <div class="team-content">
+                            <h4 class="text-xl font-bold text-primary">Rajiv Sharma</h4>
+                            <p class="text-accent font-medium">CEO & Founder</p>
+                            <div class="team-social">
+                                <a href="#" class="team-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="team-social-icon"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <div class="team-img-placeholder"></div>
+                        </div>
+                        <div class="team-content">
+                            <h4 class="text-xl font-bold text-primary">Priya Mehta</h4>
+                            <p class="text-accent font-medium">CTO</p>
+                            <div class="team-social">
+                                <a href="#" class="team-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="team-social-icon"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <div class="team-img-placeholder"></div>
+                        </div>
+                        <div class="team-content">
+                            <h4 class="text-xl font-bold text-primary">David Chen</h4>
+                            <p class="text-accent font-medium">Global Operations Head</p>
+                            <div class="team-social">
+                                <a href="#" class="team-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="team-social-icon"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 4 -->
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <div class="team-img-placeholder"></div>
+                        </div>
+                        <div class="team-content">
+                            <h4 class="text-xl font-bold text-primary">Sarah Johnson</h4>
+                            <p class="text-accent font-medium">CFO</p>
+                            <div class="team-social">
+                                <a href="#" class="team-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="team-social-icon"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Core Team -->
+            <div>
+                <h3 class="text-2xl font-bold text-primary mb-8 text-center" data-aos="fade-up">Core Team</h3>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="core-team-card"></div>
+                    <div class="core-team-card"></div>
+                    <div class="core-team-card"></div>
+                    <div class="core-team-card"></div>
+                    <div class="core-team-card"></div>
+                    <div class="core-team-card"></div>
+                    <div class="core-team-card"></div>
+                    <div class="core-team-card"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building Tomorrow Together Section -->
+    <section id="contact-section" class="py-24 relative overflow-hidden bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                    Building Tomorrow Together
+                </span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-6">Connect With Us</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Ready to transform your back-office operations? Get in touch with us today.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6" data-aos="fade-up" data-aos-delay="100">
+                <!-- Inquiries -->
+                <div class="connect-card">
+                    <div class="connect-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Inquiries</h3>
+                    <p class="text-gray-600 mb-4">
+                        Ready to take our relationship to the next level?
+                    </p>
+                    <a href="index.html#contact" class="connect-btn group">
+                        <span>Talk to Sales</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+                
+                <!-- Media Kit -->
+                <div class="connect-card">
+                    <div class="connect-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Media Kit</h3>
+                    <p class="text-gray-600 mb-4">
+                        Find a condensed version of this page at the link below.
+                    </p>
+                    <a href="#" class="connect-btn group">
+                        <span>Download Now</span>
+                        <i class="fas fa-download ml-2 group-hover:translate-y-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+                
+                <!-- Contact -->
+                <div class="connect-card">
+                    <div class="connect-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Contact</h3>
+                    <p class="text-gray-600 mb-4">
+                        Any questions or concerns on your mind? Don't hesitate to reach out.
+                    </p>
+                    <a href="index.html#contact" class="connect-btn group">
+                        <span>Get in Touch</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+                
+                <!-- Explore -->
+                <div class="connect-card">
+                    <div class="connect-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Explore</h3>
+                    <p class="text-gray-600 mb-4">
+                        Want to learn more about our solutions? Take a deep dive.
+                    </p>
+                    <a href="index.html#brands" class="connect-btn group">
+                        <span>Get Started</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+                
+                <!-- Career -->
+                <div class="connect-card">
+                    <div class="connect-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Career</h3>
+                    <p class="text-gray-600 mb-4">
+                        Looking for a fulfilling career in a fast-paced and inclusive working environment?
+                    </p>
+                    <a href="#" class="connect-btn group">
+                        <span>Open Roles</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component Include -->
+    <div data-include="components/footer.html"></div>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="assets/js/include.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/about.js"></script>
+</body>
+</html>
