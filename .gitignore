@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+*.AppleDouble
+*.LSOverride
+
+# Thumbs.db (Windows Thumbnail cache)
+Thumbs.db
+
+# Icon? (Windows custom folder icon)
+ehthumbs.db
+
+# Optional: Common editor directories
+.idea/
+.vscode/
