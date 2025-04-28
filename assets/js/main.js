@@ -402,6 +402,127 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // ===== Banner Carousel =====
+    const scrollingBanner = document.querySelector('.scrolling-banner');
+    
+    if (scrollingBanner) {
+        const bannerInner = scrollingBanner.querySelector('.scrolling-banner-inner');
+        const bannerItems = scrollingBanner.querySelectorAll('.banner-item');
+        const prevButton = scrollingBanner.querySelector('.banner-prev');
+        const nextButton = scrollingBanner.querySelector('.banner-next');
+        const dotsContainer = scrollingBanner.querySelector('.banner-dots');
+        
+        let currentBannerIndex = 0;
+        let bannerAutoplayInterval;
+        
+        // Create dots for banner
+        function createBannerDots() {
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < bannerItems.length; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('banner-dot');
+                if (i === currentBannerIndex) {
+                    dot.classList.add('active');
+                }
+                dot.addEventListener('click', () => goToBanner(i));
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Update dots for banner
+        function updateBannerDots() {
+            const dots = dotsContainer.querySelectorAll('.banner-dot');
+            dots.forEach((dot, i) => {
+                if (i === currentBannerIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+        
+        // Update banner position
+        function updateBanner() {
+            bannerInner.style.transform = `translateX(-${currentBannerIndex * 100}%)`;
+            updateBannerDots();
+        }
+        
+        // Go to specific banner
+        function goToBanner(index) {
+            currentBannerIndex = index;
+            updateBanner();
+        }
+        
+        // Previous banner
+        function prevBanner() {
+            currentBannerIndex = (currentBannerIndex === 0) ? bannerItems.length - 1 : currentBannerIndex - 1;
+            updateBanner();
+        }
+        
+        // Next banner
+        function nextBanner() {
+            currentBannerIndex = (currentBannerIndex === bannerItems.length - 1) ? 0 : currentBannerIndex + 1;
+            updateBanner();
+        }
+        
+        // Initialize banner
+        if (bannerItems.length > 0) {
+            createBannerDots();
+            
+            // Add click event to nav buttons
+            if (prevButton) {
+                prevButton.addEventListener('click', prevBanner);
+            }
+            
+            if (nextButton) {
+                nextButton.addEventListener('click', nextBanner);
+            }
+            
+            // Start autoplay
+            function startBannerAutoplay() {
+                stopBannerAutoplay();
+                bannerAutoplayInterval = setInterval(nextBanner, 5000);
+            }
+            
+            // Stop autoplay
+            function stopBannerAutoplay() {
+                if (bannerAutoplayInterval) {
+                    clearInterval(bannerAutoplayInterval);
+                }
+            }
+            
+            // Start autoplay
+            startBannerAutoplay();
+            
+            // Pause autoplay on hover
+            scrollingBanner.addEventListener('mouseenter', stopBannerAutoplay);
+            scrollingBanner.addEventListener('mouseleave', startBannerAutoplay);
+            
+            // Add touch events for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            bannerInner.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+                stopBannerAutoplay();
+            }, { passive: true });
+            
+            bannerInner.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleBannerSwipe();
+                startBannerAutoplay();
+            }, { passive: true });
+            
+            function handleBannerSwipe() {
+                if (touchEndX < touchStartX - 50) {
+                    nextBanner();
+                } else if (touchEndX > touchStartX + 50) {
+                    prevBanner();
+                }
+            }
+        }
+    }
+    
     // Load social feeds with a delay to simulate API call
     setTimeout(loadSocialFeeds, 1500);
     
