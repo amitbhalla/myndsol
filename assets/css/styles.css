@@ -338,86 +338,102 @@ body {
 }
 
 /* ======= Brands Section ======= */
-.brand-tabs-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+/* Modern Brand Card Design */
+.brand-card {
+    height: 450px;
     position: relative;
-    background-color: var(--gray-100);
-    border-radius: 50px;
-    padding: 0.5rem;
-    margin-bottom: 2rem;
-}
-
-.brand-tab {
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    font-weight: 600;
-    color: var(--gray-600);
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.brand-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.brand-card-inner {
     position: relative;
-    z-index: 1;
-    margin: 0 0.25rem;
+    width: 100%;
+    height: 100%;
 }
 
-.brand-tab.active {
-    color: white;
-}
-
-.brand-tab-indicator {
-    position: absolute;
-    height: 80%;
-    top: 10%;
-    background-color: var(--primary);
-    border-radius: 50px;
-    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    z-index: 0;
-}
-
-.brand-content {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.brand-content.active {
-    display: block;
-    opacity: 1;
-}
-
-.brand-content-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .brand-content-inner {
-        grid-template-columns: 1fr;
-    }
-}
-
-.brand-icon-container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.brand-pattern {
+.brand-card-front, .brand-card-back {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, var(--primary-light), var(--secondary));
+    border-radius: 16px;
+    transition: all 0.5s ease-in-out;
+}
+
+.brand-card-front {
+    background-color: white;
+    border: 1px solid var(--gray-200);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    z-index: 2;
+}
+
+.brand-card:hover .brand-card-front {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.brand-card-back {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid var(--gray-200);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.brand-card:hover .brand-card-back {
+    opacity: 1;
+    visibility: visible;
+}
+
+.brand-icon-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+    transition: all 0.3s ease;
+}
+
+.brand-card:hover .brand-icon-wrapper {
+    transform: scale(1.1);
+}
+
+/* Morph animation for background shapes */
+.brand-icon-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, var(--accent), var(--accent2));
     border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-    opacity: 0.1;
-    animation: morphAnimation 10s infinite alternate;
+    opacity: 0.2;
+    z-index: -1;
+    animation: morphAnimation 8s infinite alternate;
 }
 
 @keyframes morphAnimation {

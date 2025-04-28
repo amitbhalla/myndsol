@@ -289,7 +289,7 @@
     <!-- Our Brands Section -->
     <section id="brands" class="py-24 relative overflow-hidden bg-white">
         <div class="container mx-auto px-6 lg:px-8">
-            <div class="text-center mb-20" data-aos="fade-up">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
                     Our Brands
                 </span>
@@ -299,153 +299,163 @@
                 </p>
             </div>
             
-            <!-- Brands Tabs -->
-            <div class="max-w-5xl mx-auto">
-                <div class="flex flex-wrap justify-center mb-10 relative" data-aos="fade-up" data-aos-delay="100">
-                    <div class="brand-tabs-container">
-                        <button class="brand-tab active" data-target="enterprise">
-                            <i class="fas fa-building-columns mr-2"></i>
-                            <span>Enterprise Solutions</span>
-                        </button>
-                        <button class="brand-tab" data-target="myndx">
-                            <i class="fas fa-microchip mr-2"></i>
-                            <span>MYNDX</span>
-                        </button>
-                        <button class="brand-tab" data-target="gig">
-                            <i class="fas fa-users-gear mr-2"></i>
-                            <span>MYND GIG</span>
-                        </button>
-                        <div class="brand-tab-indicator"></div>
+            <!-- Brand Cards (Modern Redesign) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- MYND Enterprise Solutions Card -->
+                <div class="brand-card group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="brand-card-inner">
+                        <div class="brand-card-front flex flex-col items-center justify-center text-center p-8 h-full">
+                            <div class="brand-icon-wrapper mb-6">
+                                <i class="fas fa-building-columns text-5xl text-accent"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">MYND Enterprise Solutions</h3>
+                            <p class="text-accent font-medium mb-4">"Where Back-Office Meets BPM Excellence"</p>
+                            <p class="text-gray-600">
+                                Integrating experts and innovative technology to tackle process challenges in finance, accounts, and HR.
+                            </p>
+                            <div class="absolute bottom-6 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-primary font-medium">Flip for details</span>
+                                <i class="fas fa-rotate ml-1 text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="brand-card-back p-6 h-full overflow-y-auto">
+                            <h3 class="text-xl font-bold mb-3 text-white">What You Get:</h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 rounded-full bg-accent flex items-center justify-center mt-0.5 mr-2">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-white text-sm">End-to-end Procure to Pay and Order to Cash solutions</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 rounded-full bg-accent flex items-center justify-center mt-0.5 mr-2">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-white text-sm">Record to Report, Field & Store Audits</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 rounded-full bg-accent flex items-center justify-center mt-0.5 mr-2">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-white text-sm">Multi-country Payroll (MCPO) and Regulatory Compliance</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 rounded-full bg-accent flex items-center justify-center mt-0.5 mr-2">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-white text-sm">Delivered by specialists who streamline your back office</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="inline-flex items-center font-medium text-white hover:text-accent transition-colors duration-300 group mt-auto">
+                                <span>Explore MYND Enterprise Solutions</span>
+                                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="brand-content-container" data-aos="fade-up" data-aos-delay="200">
-                    <!-- MYND Enterprise Solutions -->
-                    <div id="enterprise" class="brand-content active">
-                        <div class="brand-content-inner">
-                            <div class="brand-content-left">
-                                <h3 class="text-2xl lg:text-3xl font-bold mb-3">MYND Enterprise Solutions</h3>
-                                <p class="text-accent font-medium mb-6">"Where Back-Office Meets BPM Excellence"</p>
-                                <p class="text-gray-600 mb-6">
-                                    MYND Enterprise Solutions offers Business Process Management (BPM) services, integrating experts and innovative technology to tackle process challenges in finance and accounts (F&A) and human resources (HR).
-                                </p>
-                                <div class="space-y-4 mb-8">
-                                    <div class="flex items-start">
-                                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-accent/20 flex items-center justify-center mt-1 mr-3">
-                                            <i class="fas fa-check text-accent text-sm"></i>
-                                        </div>
-                                        <p>End-to-end Procure to Pay and Order to Cash solutions</p>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-accent/20 flex items-center justify-center mt-1 mr-3">
-                                            <i class="fas fa-check text-accent text-sm"></i>
-                                        </div>
-                                        <p>Record to Report, Field & Store Audits</p>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-accent/20 flex items-center justify-center mt-1 mr-3">
-                                            <i class="fas fa-check text-accent text-sm"></i>
-                                        </div>
-                                        <p>Multi-country Payroll (MCPO) and Regulatory Compliance</p>
-                                    </div>
-                                </div>
-                                <a href="#" class="inline-flex items-center font-medium text-primary hover:text-accent transition-colors duration-300 group">
-                                    <span>Learn more about Enterprise Solutions</span>
-                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                                </a>
+                <!-- MYNDX Card -->
+                <div class="brand-card group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="brand-card-inner">
+                        <div class="brand-card-front flex flex-col items-center justify-center text-center p-8 h-full">
+                            <div class="brand-icon-wrapper mb-6">
+                                <i class="fas fa-microchip text-5xl text-accent"></i>
                             </div>
-                            <div class="brand-content-right">
-                                <div class="brand-icon-container">
-                                    <i class="fas fa-building-columns text-6xl text-accent opacity-70"></i>
-                                    <div class="brand-pattern"></div>
-                                </div>
+                            <h3 class="text-2xl font-bold mb-3">MYNDX</h3>
+                            <p class="text-accent font-medium mb-4">"Tech-Driven, SaaS-Powered Back-Office Automation"</p>
+                            <p class="text-gray-600">
+                                Discover SaaS products designed with AI, ML, and RPA to automate essential operations effortlessly!
+                            </p>
+                            <div class="absolute bottom-6 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-primary font-medium">Flip for details</span>
+                                <i class="fas fa-rotate ml-1 text-primary"></i>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- MYNDX -->
-                    <div id="myndx" class="brand-content">
-                        <div class="brand-content-inner">
-                            <div class="brand-content-left">
-                                <h3 class="text-2xl lg:text-3xl font-bold mb-3">MYNDX</h3>
-                                <p class="text-accent font-medium mb-6">"Tech-Driven, SaaS-Powered Back-Office Automation"</p>
-                                <p class="text-gray-600 mb-6">
-                                    Discover a collection of SaaS products designed with AI, ML, and RPA to automate essential operations effortlessly! With MYNDX, you'll experience a remarkable boost in process automation.
-                                </p>
-                                <div class="space-y-4 mb-8">
-                                    <div class="flex items-start">
-                                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-accent/20 flex items-center justify-center mt-1 mr-3">
-                                            <i class="fas fa-check text-accent text-sm"></i>
-                                        </div>
-                                        <p>Vendor Management and Employee Lifecycle Management</p>
+                        <div class="brand-card-back p-6 h-full overflow-y-auto">
+                            <h3 class="text-xl font-bold mb-3 text-white">What You Get:</h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 rounded-full bg-accent flex items-center justify-center mt-0.5 mr-2">
+                                        <i class="fas fa-check text-white text-xs"></i>
                                     </div>
-                                    <div class="flex items-start">
-                                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-accent/20 flex items-center justify-center mt-1 mr-3">
-                                            <i class="fas fa-check text-accent text-sm"></i>
-                                        </div>
-                                        <p>Lease Management and Payroll Automation</p>
+                                    <span class="text-white text-sm">Custom software tools that fit into your current processes</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 rounded-full bg-accent flex items-center justify-center mt-0.5 mr-2">
+                                        <i class="fas fa-check text-white text-xs"></i>
                                     </div>
-                                    <div class="flex items-start">
-                                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-accent/20 flex items-center justify-center mt-1 mr-3">
-                                            <i class="fas fa-check text-accent text-sm"></i>
-                                        </div>
-                                        <p>Travel & Expense Management and Petty Cash Management</p>
+                                    <span class="text-white text-sm">Vendor Management and Employee Lifecycle Management</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 rounded-full bg-accent flex items-center justify-center mt-0.5 mr-2">
+                                        <i class="fas fa-check text-white text-xs"></i>
                                     </div>
-                                </div>
-                                <a href="#" class="inline-flex items-center font-medium text-primary hover:text-accent transition-colors duration-300 group">
-                                    <span>Learn more about MYNDX</span>
-                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                                </a>
-                            </div>
-                            <div class="brand-content-right">
-                                <div class="brand-icon-container">
-                                    <i class="fas fa-microchip text-6xl text-accent opacity-70"></i>
-                                    <div class="brand-pattern"></div>
-                                </div>
-                            </div>
+                                    <span class="text-white text-sm">Lease Management and Payroll Automation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 rounded-full bg-accent flex items-center justify-center mt-0.5 mr-2">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-white text-sm">Travel & Expense Management and Petty Cash Management</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="inline-flex items-center font-medium text-white hover:text-accent transition-colors duration-300 group mt-auto">
+                                <span>Explore MYNDX</span>
+                                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                            </a>
                         </div>
                     </div>
-                    
-                    <!-- MYND GIG -->
-                    <div id="gig" class="brand-content">
-                        <div class="brand-content-inner">
-                            <div class="brand-content-left">
-                                <h3 class="text-2xl lg:text-3xl font-bold mb-3">MYND GIG</h3>
-                                <p class="text-accent font-medium mb-6">"Specialized Staffing & Recruiting on Demand"</p>
-                                <p class="text-gray-600 mb-6">
-                                    Our dedicated staffing and recruitment team is here to support you with RPO, Source and Deploy, and Staffing Solutions for technical and non-technical roles.
-                                </p>
-                                <div class="space-y-4 mb-8">
-                                    <div class="flex items-start">
-                                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-accent/20 flex items-center justify-center mt-1 mr-3">
-                                            <i class="fas fa-check text-accent text-sm"></i>
-                                        </div>
-                                        <p>Access to incredible talent pool and smoother hiring</p>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-accent/20 flex items-center justify-center mt-1 mr-3">
-                                            <i class="fas fa-check text-accent text-sm"></i>
-                                        </div>
-                                        <p>Swiftly fill operational roles as you scale</p>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-accent/20 flex items-center justify-center mt-1 mr-3">
-                                            <i class="fas fa-check text-accent text-sm"></i>
-                                        </div>
-                                        <p>Build a compliant workforce across operations</p>
-                                    </div>
-                                </div>
-                                <a href="#" class="inline-flex items-center font-medium text-primary hover:text-accent transition-colors duration-300 group">
-                                    <span>Learn more about MYND GIG</span>
-                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                                </a>
+                </div>
+                
+                <!-- MYND GIG Card -->
+                <div class="brand-card group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="brand-card-inner">
+                        <div class="brand-card-front flex flex-col items-center justify-center text-center p-8 h-full">
+                            <div class="brand-icon-wrapper mb-6">
+                                <i class="fas fa-users-gear text-5xl text-accent"></i>
                             </div>
-                            <div class="brand-content-right">
-                                <div class="brand-icon-container">
-                                    <i class="fas fa-users-gear text-6xl text-accent opacity-70"></i>
-                                    <div class="brand-pattern"></div>
-                                </div>
+                            <h3 class="text-2xl font-bold mb-3">MYND GIG</h3>
+                            <p class="text-accent font-medium mb-4">"Specialized Staffing & Recruiting on Demand"</p>
+                            <p class="text-gray-600">
+                                Our dedicated team supports you with RPO, Source and Deploy, and Staffing Solutions for all roles.
+                            </p>
+                            <div class="absolute bottom-6 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span class="text-primary font-medium">Flip for details</span>
+                                <i class="fas fa-rotate ml-1 text-primary"></i>
                             </div>
+                        </div>
+                        <div class="brand-card-back p-6 h-full overflow-y-auto">
+                            <h3 class="text-xl font-bold mb-3 text-white">What You Get:</h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 rounded-full bg-accent flex items-center justify-center mt-0.5 mr-2">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-white text-sm">Easy access to an incredible talent pool and smoother hiring</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 rounded-full bg-accent flex items-center justify-center mt-0.5 mr-2">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-white text-sm">Swiftly fill operational roles as you scale</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 rounded-full bg-accent flex items-center justify-center mt-0.5 mr-2">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-white text-sm">Build a compliant workforce across operations</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 rounded-full bg-accent flex items-center justify-center mt-0.5 mr-2">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-white text-sm">Dedicated legal entity (AAPT) for seamless staffing solutions</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="inline-flex items-center font-medium text-white hover:text-accent transition-colors duration-300 group mt-auto">
+                                <span>Explore MYND GIG</span>
+                                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
